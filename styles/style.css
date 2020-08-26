@@ -42,7 +42,8 @@ li {
     background-repeat: none;
     opacity: 0;
     z-index: 0;
-    animation: imageAnimation 36s linear infinite 0s; 
+    animation: imageAnimation 36s linear infinite 0s;
+    animation-delay: 2s; 
 }
 .cb-slideshow li:nth-child(1) span { 
     background-image: url('img/img-four.jpg') 
@@ -100,12 +101,19 @@ li {
 }
 
 		/*Landing Page Title Fade in*/
-.landing-header {
-  animation: fadeIn ease 3s;
-  -webkit-animation: fadeIn ease 3s;
-  -moz-animation: fadeIn ease 3s;
-  -o-animation: fadeIn ease 3s;
-  -ms-animation: fadeIn ease 3s;
+.landing-header .a, .e, .i, .l{
+  animation: fadeIn ease 3s steps;
+  -webkit-animation: fadeIn ease-in 3s;
+  -moz-animation: fadeIn ease-in 3s;
+  -o-animation: fadeIn ease-in 3s;
+  -ms-animation: fadeIn ease-in 3s;
+}
+.landing-header .x, .r, .g{
+  animation: fadeIn ease 3s steps;
+  -webkit-animation: fadeIn ease-in 2s;
+  -moz-animation: fadeIn ease-in 2s;
+  -o-animation: fadeIn ease-in 2s;
+  -ms-animation: fadeIn ease-in 2s;
 }
 
 		/*Landing Page Scroll Fade in(4s later completed)*/
@@ -138,7 +146,7 @@ li {
 	font-family: 'Manrope', sans-serif;
 	letter-spacing: 2px;
 	opacity: 0;
-	margin-top:;
+	
 }
 		/*Animation that is under .scroll : moving bar from left to right, infinite, overflow hidden*/
 #scroll-pls-animation {
