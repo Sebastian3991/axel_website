@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@500&display=swap');
+
+body {
+	margin: 0;
+	overflow: hidden;
+}
+.landing {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    /*border: 1px solid black;*/
+    align-items: center;
+    background-image: url("img/img-four.jpg");	
+	background-size: cover;
+	background-position: center center;
+	width: 100vw;
+	height: 100vh;
+
+}
+
+.landing-header {
+	/*border: 1px solid black;*/
+	position: absolute;
+	font-family: 'Manrope', sans-serif;
+	font-size: 4em;
+	letter-spacing: 16px;
+	text-transform: uppercase;
+	bottom: 40vh;
+}
+
+		/*Landing Page Title Fade in*/
+.landing-header {
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+  -moz-animation: fadeIn ease 3s;
+  -o-animation: fadeIn ease 3s;
+  -ms-animation: fadeIn ease 3s;
+}
+
+		/*Landing Page Scroll Fade in(4s later completed)*/
+/*.scroll, #scroll-pls-animation {
+   animation: fadeIn ease 10s;
+  -webkit-animation: fadeIn ease 10s;
+  -moz-animation: fadeIn ease 10s;
+  -o-animation: fadeIn ease 10s;
+  -ms-animation: fadeIn ease 10s;
+}*/
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+
+.scroll {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	font-size: 18px;
+	font-weight: bold;
+	border-style: none;
+	font-family: inherit;
+	font-family: 'Manrope', sans-serif;
+	letter-spacing: 2px;
+	opacity: 0;
+	margin-top:;
+}
+		/*Animation that is under .scroll : moving bar from left to right, infinite, overflow hidden*/
+#scroll-pls-animation {
+	bottom: 6.5vh;
+	width: 75px;
+	height: 2px;
+	position: absolute;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+#scroll-pls-animation:before {
+	display: block;
+	position: absolute;
+	content:"";
+	left:-200px;
+	width:75px;
+	height: 2px;
+	background-color: #1A1A1A;
+	animation: loading 1.5s linear infinite;
+	animation-delay: 1.5s;
+}
+@keyframes loading {
+	0%{
+		left: -200px;
+	}
+	50% {
+		width: 30%;
+	}
+	70% {
+		width: 70%;
+	}
+	80% {
+		left: 50%;
+	}
+	95% {
+		left: 120%;
+	}
+	to {
+		left: 100%;
+	}
+
+}
+
+		/* Fly in from bottom for .scroll and #scroll-pls-animation*/
+
+.scroll {
+    animation: bottomToTopScroll 0.5s linear;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+
+  }
+
+@keyframes bottomToTopScroll {
+  0% {
+    bottom: -50px;
+    opacity: 1;
+  }
+  25% {
+  	bottom: 0px;
+  	opacity: 1;
+  }
+  50% {
+    bottom: 3vh;
+    opacity: 1;
+  }
+  100% {
+    bottom: 6vh;
+    opacity: 1;
+  }
+}
+
+#scroll-pls-animation {
+	animation: bottomToTopScrollAnimation 0.5s linear;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+
+}
+
+@keyframes bottomToTopScrollAnimation {
+  0% {
+    bottom: -50px;
+    opacity: 1;
+  }
+  25% {
+  	bottom: 1vh;
+  	opacity: 1;
+  }
+  50% {
+    bottom: 3vh;
+    opacity: 1;
+  }
+  100% {
+    bottom: 5vh;
+    opacity: 1;
+  }
+}
+
+.landing a {
+	text-decoration: none;
+}
+
+.landing a:visited {
+	color: #1A1A1A;
+}
+
+
+
+
+
