@@ -1,3 +1,6 @@
+const openCloseBtn = document.querySelector('.navbar-icon');
+
+
 //check for landing page
 if(document.getElementById('landing-page-check')) {
 	  //load home page when scrolled
@@ -18,21 +21,18 @@ function openToCloseNav() {
 }
 
 //home page nav bar animation
-const openCloseBtn = document.querySelector('.navbar-icon');
-
 window.onload=function(){
-
-
 const nav = document.querySelector('.navbar');
-
 openCloseBtn.addEventListener('click', () => {
-	// add visible class
+	// remove visible class if visible
 	if(nav.classList.contains('visible'))
 	{
 		nav.classList.remove('visible');
 		openToCloseNav();
 	}
 	 else{
+
+	// add visible class if nav bar not showing
 		nav.classList.add('visible');
 		openToCloseNav();
 
