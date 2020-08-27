@@ -116,6 +116,10 @@ li {
   -ms-animation: fadeIn ease-in 2s;
 }
 
+.landing-header .space {
+	margin: 20px;
+}
+
 		/*Landing Page Scroll Fade in(4s later completed)*/
 /*.scroll, #scroll-pls-animation {
    animation: fadeIn ease 10s;

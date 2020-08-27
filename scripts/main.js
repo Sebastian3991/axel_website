@@ -13,8 +13,31 @@ function redirectLanding(){
 	window.location.href = 'self.html';
 }
 
-function openToCloseNav(x) {
-  x.classList.toggle("change");
+function openToCloseNav() {
+  openCloseBtn.classList.toggle("change");
 }
+
+//home page nav bar animation
+const openCloseBtn = document.querySelector('.navbar-icon');
+
+window.onload=function(){
+
+
+const nav = document.querySelector('.navbar');
+
+openCloseBtn.addEventListener('click', () => {
+	// add visible class
+	if(nav.classList.contains('visible'))
+	{
+		nav.classList.remove('visible');
+		openToCloseNav();
+	}
+	 else{
+		nav.classList.add('visible');
+		openToCloseNav();
+
+	}
+	})};
+
 
 
