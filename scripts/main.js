@@ -1,4 +1,5 @@
 const openCloseBtn = document.querySelector('.navbar-icon');
+const openCloseNav = document.querySelector('.navigation');
 
 
 //check for landing page
@@ -13,17 +14,35 @@ window.onbeforeunload = function(e){
 }
 
 function redirectLanding(){
-	window.location.href = 'self.html';
+	window.location.href = 'home.html';
 }
 
 function openToCloseNav() {
   openCloseBtn.classList.toggle("change");
+  openCloseNav.classList.toggle("change");
+
 }
 
 //home page nav bar animation
 window.onload=function(){
 const nav = document.querySelector('.navbar');
 openCloseBtn.addEventListener('click', () => {
+	// remove visible class if visible
+	if(nav.classList.contains('visible'))
+	{
+		nav.classList.remove('visible');
+		openToCloseNav();
+	}
+	 else{
+
+	// add visible class if nav bar not showing
+		nav.classList.add('visible');
+		openToCloseNav();
+
+	}
+	})
+
+openCloseNav.addEventListener('click', () => {
 	// remove visible class if visible
 	if(nav.classList.contains('visible'))
 	{
