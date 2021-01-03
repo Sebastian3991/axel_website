@@ -198,10 +198,9 @@ li {
 		/* Fly in from bottom for .scroll and #scroll-pls-animation*/
 
 .scroll {
-  animation: bottomToTopScroll 0.5s linear;
+  animation: bottomToTopScroll 0.5s linear forwards;
   animation-delay: 2s;
   animation-fill-mode: both;
-
   }
 
 @keyframes bottomToTopScroll {
