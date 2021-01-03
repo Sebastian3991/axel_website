@@ -169,6 +169,7 @@ li {
 	left:-200px;
 	width:75px;
 	height: 2px;
+	background-color: #1A1A1A;
 	animation: loading 1.5s linear infinite;
 	animation-delay: 2s;
 }
@@ -249,8 +250,9 @@ li {
 }
 
 .landing a {
-	text-decoration: none;#
+	text-decoration: none;
 	color: #1A1A1A;
+
 }
 
 .landing a:visited {
