@@ -98,19 +98,23 @@ li {
 
 		/*Landing Page Title Fade in*/
 .landing-header .a, .r{
-  font-size: 80px;
-  animation: fadeInBig ease 2s steps;
-  -webkit-animation: fadeIn ease-in 2s;
-  -moz-animation: fadeIn ease-in 2s;
-  -o-animation: fadeIn ease-in 2s;
-  -ms-animation: fadeIn ease-in 2s;
+	font-size: 80px;
+	opacity: 0;
+  animation: fadeInBig ease 2s forwards;
+  -webkit-animation: fadeIn ease-in 2s forwards;
+  -moz-animation: fadeIn ease-in 2s forwards;
+  -o-animation: fadeIn ease-in 2s forwards;
+	-ms-animation: fadeIn ease-in 2s forwards;
+	animation-delay: 1s;
 }
 .landing-header .x, .g, .i, .l, .e, .rtwo{
-  animation: fadeIn ease 3s steps;
-  -webkit-animation: fadeIn ease-in 3s;
-  -moz-animation: fadeIn ease-in 3s;
-  -o-animation: fadeIn ease-in 3s;
-  -ms-animation: fadeIn ease-in 3s;
+	opacity: 0;
+  animation: fadeIn ease 3s forwards;
+  -webkit-animation: fadeIn ease-in 3s forwards;
+  -moz-animation: fadeIn ease-in 3s forwards;
+  -o-animation: fadeIn ease-in 3s forwards;
+	-ms-animation: fadeIn ease-in 3s forwards;
+	animation-delay: 1s;
 }
 
 .landing-header .space {
@@ -129,11 +133,9 @@ li {
 @keyframes fadeInBig {
   0% {
     opacity:0;
-    font-size:60px !important;
   }
   100% {
     opacity:1;
-    font-size:60px !important;
   }
 }
 
@@ -169,7 +171,7 @@ li {
 	height: 2px;
 	background-color: #1A1A1A;
 	animation: loading 1.5s linear infinite;
-	animation-delay: 1.5s;
+	animation-delay: 2s;
 }
 @keyframes loading {
 	0%{
